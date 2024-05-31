@@ -153,4 +153,4 @@ The mock bearer token will then ensure that the dummy api user has the required 
 
 ## Licence
 
-[MIT License](LICENCE)
+[MIT License](LICENSE)
