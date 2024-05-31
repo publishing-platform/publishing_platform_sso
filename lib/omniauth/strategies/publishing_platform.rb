@@ -2,9 +2,10 @@ require "omniauth-oauth2"
 require "json"
 
 class OmniAuth::Strategies::PublishingPlatform < OmniAuth::Strategies::OAuth2
-  uid { user["uid"] }
-
+  option :name, "publishing_platform"
   option :pkce, true
+
+  uid { user["uid"] }  
 
   info do
     {

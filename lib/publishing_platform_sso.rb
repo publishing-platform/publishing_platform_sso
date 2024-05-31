@@ -40,7 +40,7 @@ module PublishingPlatform
                  client_options: {
                    site: PublishingPlatform::SSO::Config.oauth_root_url,
                    authorize_url: "#{PublishingPlatform::SSO::Config.oauth_root_url}/oauth/authorize",
-                   token_url: "#{PublishingPlatform::SSO::Config.oauth_root_url}/oauth/access_token",
+                   token_url: "#{PublishingPlatform::SSO::Config.oauth_root_url}/oauth/token",
                    connection_opts: {
                      headers: {
                        user_agent: "publishing_platform_sso/#{PublishingPlatform::SSO::VERSION} (#{ENV['PUBLISHING_PLATFORM_APP_NAME']})",

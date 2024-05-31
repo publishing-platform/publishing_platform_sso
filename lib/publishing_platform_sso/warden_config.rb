@@ -46,7 +46,7 @@ Warden::Strategies.add(:publishing_platform_sso) do
 private
 
   def prep_user(auth_hash)
-    user = publishing_platform_sso::SSO::Config.user_klass.find_for_oauth(auth_hash)
+    user = PublishingPlatform::SSO::Config.user_klass.find_for_oauth(auth_hash)
     fail!("Couldn't process credentials") unless user
     user
   end
