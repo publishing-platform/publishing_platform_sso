@@ -27,5 +27,12 @@ Gem::Specification.new do |spec|
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
 
+  spec.add_dependency "oauth2", "~> 2.0"
+  spec.add_dependency "omniauth", "~> 2.1"
+  spec.add_dependency "omniauth-oauth2", "~> 1.8"
+  spec.add_dependency "rails", ">= 7"
+  spec.add_dependency "warden", "~> 1.2"
+  spec.add_dependency "warden-oauth2", "~> 0.0.1"
+
   spec.add_development_dependency "publishing_platform_rubocop"
 end
