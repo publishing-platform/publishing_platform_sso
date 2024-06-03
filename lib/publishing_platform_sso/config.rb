@@ -1,4 +1,5 @@
 require "active_support/cache/null_store"
+require "publishing_platform_location"
 
 module PublishingPlatform
   module SSO
@@ -19,7 +20,7 @@ module PublishingPlatform
 
       # Location of the OAuth server
       mattr_accessor :oauth_root_url
-      @@oauth_root_url = "http://signon.dev.publishing-platform.co.uk" # Plek.new.external_url_for("signon") # TODO: need to implement this functionality
+      @@oauth_root_url = PublishingPlatformLocation.find("signon")
 
       mattr_accessor :auth_valid_for
       @@auth_valid_for = 20 * 3600

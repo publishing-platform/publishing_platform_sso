@@ -24,8 +24,7 @@ Gem::Specification.new do |spec|
   spec.executables = []
   spec.require_paths = %w[lib]
 
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
+  spec.add_dependency "publishing_platform_location"
 
   spec.add_dependency "oauth2", "~> 2.0"
   spec.add_dependency "omniauth", "~> 2.1"
