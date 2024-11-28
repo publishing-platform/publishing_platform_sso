@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.summary = "Client for Publishing Platform's OAuth 2-based SSO."
   spec.description = "Client for Publishing Platform's OAuth 2-based SSO."
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 3.0"
+  spec.required_ruby_version = ">= 3.1"
 
   spec.files = Dir[
     "app/**/*",
@@ -33,5 +33,11 @@ Gem::Specification.new do |spec|
   spec.add_dependency "warden", "~> 1.2"
   spec.add_dependency "warden-oauth2", "~> 0.0.1"
 
+  spec.add_development_dependency "capybara", "~> 3"
+  spec.add_development_dependency "combustion", "~> 1.3"
   spec.add_development_dependency "publishing_platform_rubocop"
+  spec.add_development_dependency "rspec-rails", "~> 7"
+  spec.add_development_dependency "sqlite3", "~> 2.1"
+  spec.add_development_dependency "timecop", "~> 0.9"
+  spec.add_development_dependency "webmock"
 end

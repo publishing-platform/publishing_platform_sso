@@ -151,6 +151,25 @@ end
 
 The mock bearer token will then ensure that the dummy api user has the required permission.
 
+### Testing in your application
+
+If your app is using `rspec`, there is a [shared examples spec](/lib/publishing_platform_sso/lint/user_spec.rb) compatible with `PublishingPlatform::SSO::User`:
+
+```ruby
+require 'publishing_platform_sso/lint/user_spec'
+
+describe User do
+  it_behaves_like "a publishing_platform_sso user class"
+end
+
+### Running the test suite
+
+Run the tests with:
+
+```
+bundle exec rake
+```
+
 ## Licence
 
 [MIT License](LICENSE)

@@ -5,7 +5,7 @@ class OmniAuth::Strategies::PublishingPlatform < OmniAuth::Strategies::OAuth2
   option :name, "publishing_platform"
   option :pkce, true
 
-  uid { user["uid"] }  
+  uid { user["uid"] }
 
   info do
     {
