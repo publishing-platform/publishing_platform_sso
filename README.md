@@ -161,6 +161,7 @@ require 'publishing_platform_sso/lint/user_spec'
 describe User do
   it_behaves_like "a publishing_platform_sso user class"
 end
+```
 
 ### Running the test suite
 
