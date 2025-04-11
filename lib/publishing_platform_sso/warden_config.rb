@@ -66,7 +66,7 @@ Warden::Strategies.add(:mock_publishing_platform_sso) do
     logger.warn("Authenticating with mock_publishing_platform_sso strategy")
 
     test_user = PublishingPlatform::SSO.test_user
-    test_user ||= PublishingPlatform::SSO::Config.user_klass.first
+    test_user ||= ENV["PUBLISHING_PLATFORM_SSO_MOCK_INVALID"].present? ? nil : PublishingPlatform::SSO::Config.user_klass.first
     if test_user
       # Brute force ensure test user has correct perms to signin
       unless test_user.has_permission?("signin")
@@ -74,6 +74,8 @@ Warden::Strategies.add(:mock_publishing_platform_sso) do
         test_user.update_attribute(:permissions, permissions << "signin")
       end
       success!(test_user)
+    elsif Rails.env.test? && ENV["PUBLISHING_PLATFORM_SSO_MOCK_INVALID"].present?
+      fail!(:invalid)
     else
       raise "publishing_platform_sso running in mock mode and no test user found. Normally we'd load the first user in the database. Create a user in the database."
     end
