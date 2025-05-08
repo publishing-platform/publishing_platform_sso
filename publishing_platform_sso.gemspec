@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
     "lib/**/*",
     "README.md",
     "Gemfile",
-    "Rakefile"
+    "Rakefile",
   ]
 
   spec.executables = []
