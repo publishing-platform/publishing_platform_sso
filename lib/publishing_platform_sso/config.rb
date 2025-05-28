@@ -20,7 +20,7 @@ module PublishingPlatform
 
       # Location of the OAuth server
       mattr_accessor :oauth_root_url
-      @@oauth_root_url = PublishingPlatformLocation.find("signon")
+      @@oauth_root_url = PublishingPlatformLocation.external_url_for("signon")
 
       mattr_accessor :auth_valid_for
       @@auth_valid_for = 20 * 3600
