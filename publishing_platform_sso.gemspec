@@ -36,7 +36,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "capybara", "~> 3"
   spec.add_development_dependency "combustion", "~> 1.3"
   spec.add_development_dependency "publishing_platform_rubocop", "~> 0.2"
-  spec.add_development_dependency "rspec-rails", "~> 7"
+  spec.add_development_dependency "rspec-rails", "~> 8"
   spec.add_development_dependency "sqlite3", "~> 2.1"
   spec.add_development_dependency "timecop", "~> 0.9"
   spec.add_development_dependency "webmock", "~> 3.24"
